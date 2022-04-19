@@ -16,4 +16,4 @@ if day == 'Monday':
 elif(day == 'Friday'):
     print('Woohoo, time for the weekend!')
 else:
-    print('Not quite there yet.')
+    print('We are not quite there yet.')
