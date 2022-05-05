@@ -31,6 +31,25 @@ class BankAccount:
         for account in cls.accounts:
             account.display_account_info()
 
+class User:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount()
+
+    def make_deposit(self, amount):
+        self.account.deposit(amount)
+        print(self.account.balance)
+        return self
+
+    def make_withdrawal(self, amount):
+        self.account.withdraw(amount)
+        print(self.account.balance)
+
+    def display_user_balance(self):
+        self.account.display_account_info()
+
+
 Checking = BankAccount()
 Savings = BankAccount()
 
@@ -38,3 +57,8 @@ Savings.deposit(100).deposit(120).deposit(140).withdraw(70).yield_interest().dis
 Checking.deposit(75.46).deposit(89.90).withdraw(7.99).withdraw(6).withdraw(59.99).withdraw(3.99).yield_interest().display_account_info()
 
 BankAccount.print_all_accounts()
+
+Max = User("Max Williams", "mwilliams@gmail.com")
+Max.make_deposit(250)
+Max.make_withdrawal(175)
+Max.display_user_balance()
