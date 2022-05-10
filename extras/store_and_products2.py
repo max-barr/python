@@ -21,10 +21,7 @@ class Store:
         return self
 
     def set_clearance(self, category, percent_discount):
-        for product in range(0, len(self.products -1)):
-            if product.category == category:
-                product.price -= (product.price * percent_discount)
-        return self
+        pass
 
     def print_products(self):
         for product in self.products:
@@ -53,3 +50,8 @@ sliced_turkey = Product("Sliced Turkey", 7.99, "Food")
 bread = Product("Bread", 3.99, "Food")
 
 qfc.add_product(peanut_butter).add_product(sliced_turkey).add_product(bread).print_products()
+
+bread.update_price(1.15, True)
+bread.print_info()
+
+qfc.set_clearance("Food", 0.5).print_products()
