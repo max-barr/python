@@ -14,7 +14,8 @@ class SLList:
     def print_values(self):
         # A pointer to the list's first node
         runner = self.head
-        while (runner != None):
+        # While runner exists (runner != None)
+        while runner:
             print(runner.value)
             runner = runner.next
         return self
@@ -40,4 +41,5 @@ class SLNode:
         self.next = None
 
 my_list = SLList()
-my_list.add_to_front("are").add_to_front("Linked lists").add_to_back("fun!").print_values()
+# my_list.add_to_front("are").add_to_front("Linked lists").add_to_back("fun!").print_values()
+my_list.add_to_front("B").add_to_front("A").print_values()
