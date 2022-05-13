@@ -42,10 +42,10 @@ class SLList:
 
     # Remove the node at the back of the list
     def remove_from_back(self):
-        # Empty list
+        # Edge case: Empty list
         if self.head == None:
             return self
-        # One node in the list
+        # Edge case: One node in the list
         elif self.head.next == None:
             self.head = None
             return self
