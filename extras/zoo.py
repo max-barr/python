@@ -60,7 +60,30 @@ class Otter( Animal ):
     def display_info(self):
         print(f"Name: {self.name}, Health: {self.health}, Happiness: {self.happiness}, Warmth: {self.warmth}")
 
+class Zoo:
+    def __init__(self, zoo_name):
+        self.zoo_name = zoo_name
+        self.animals = []
+    
+    def add_lion(self, name, age, hunger):
+        self.animals.append( Lion(name, age, hunger) )
+        print("Lion added to zoo")
+        return self
+    
+    def add_polar_bear(self, name, age, warmth):
+        self.animals.append( PolarBear(name, age, warmth) )
+        print("Polar bear added to zoo")
+        return self
 
+    def add_otter(self, name, age, warmth):
+        self.animals.append( Otter(name, age, warmth) )
+        print("Otter added to zoo")
+        return self
+
+    def display_zoo_info(self):
+        print("-"*30, self.zoo_name, "-"*30)
+        for animal in self.animals:
+            animal.display_info()
 
 simba = Lion("Simba", 13, 80)
 simba.feed().display_info()
@@ -70,3 +93,6 @@ peter.feed().display_info()
 
 otto = Otter("Otto", 2, 65)
 otto.feed().feed().display_info()
+
+zoo1 = Zoo("My Zoo")
+zoo1.add_lion("Simba", 13, 80).add_polar_bear("Peter", 5, 70).add_otter("Otto", 2, 65).display_zoo_info()
