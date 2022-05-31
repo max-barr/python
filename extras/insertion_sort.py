@@ -14,3 +14,4 @@ def InsertionSort(arr):
     return arr
 
 print(InsertionSort([2,3,4,5,5,5,33,4,6,756,43]))
+print(InsertionSort([10,9,8,7,6,5,4,3,3,2,2,2,2,2,21,1,1,1,1]))
