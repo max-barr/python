@@ -18,6 +18,11 @@ class TestSum(unittest.TestCase):
         # Assert that the value of result == 6 with the assertEqual method of the unittest.TestCase class
         self.assertEqual(result, 6, "Should be 6")
 
+    def test_tuple_int(self):
+        data = (1,2,3,4)
+        result = sum(data)
+        self.assertEqual(result, 10, "Should be 10")
+
     # Test that it can sum a list of fractions
     def test_list_fraction(self):
         data = [Fraction(1,4), Fraction(1,4), Fraction(2,5)]
