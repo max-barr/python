@@ -39,10 +39,35 @@ class LearnAssertions(unittest.TestCase):
         t2 = Test()
         self.assertIsNot(t1,t2)
 
-    
+    def test_sample7(self):
+        t1 = Test()
+        t2 = Test()
+        t3 = None
+        self.assertIsNone(t3)
 
-    
+    def test_sample8(self):
+        t1 = Test()
+        t2 = Test()
+        t3 = None
+        self.assertIsNotNone(t2)
 
+    def test_sample9(self):
+        t1 = Test()
+        t2 = Test()
+        t3 = 10
+        self.assertTrue(10 == 10)
+
+    def test_sample10(self):
+        # t1 and t2 are different instances, so they cannot be equivalent
+        t1 = Test()
+        t2 = Test()
+        t3 = 10
+        self.assertFalse(t1 == t2)
+
+    def test_sample11(self):
+        a = 1
+        b = 2
+        self.assertFalse(a == b)
 
 if __name__ == "__main__":
     unittest.main()
