@@ -31,6 +31,10 @@ print(z)
 
 # Iterate Through a List of Dictionaries
 # Create a function iterateDictionary(some_list) that, given a list of dictionaries, the function loops through each dictionary in the list and prints each key and the associated value. For example, given the following list:
+def iterateDictionary(list):
+    for i in range(0, len(list)):
+        print("first_name: " + str(list[i]["first_name"] + ", last_name: " + str(list[i]["last_name"])))
+
 
 students = [
         {'first_name':  'Michael', 'last_name' : 'Jordan'},
@@ -50,7 +54,8 @@ iterateDictionary(students)
 # --------------------------------------------------------
 
 # Get Values From a List of Dictionaries
-# Create a function iterateDictionary2(key_name, some_list) that, given a list of dictionaries and a key name, the function prints the value stored in that key for each dictionary. For example, iterateDictionary2('first_name', students) should output:
+# Create a function iterateDictionary2(key_name, some_list) that, given a list of dictionaries and a key name, the function prints the value stored in that key for each dictionary. 
+# For example, iterateDictionary2('first_name', students) should output:
 # Michael
 # John
 # Mark
@@ -62,6 +67,19 @@ iterateDictionary(students)
 # Rosales
 # Guillen
 # Tonel
+students = [
+        {'first_name':  'Michael', 'last_name' : 'Jordan'},
+        {'first_name' : 'John', 'last_name' : 'Rosales'},
+        {'first_name' : 'Mark', 'last_name' : 'Guillen'},
+        {'first_name' : 'KB', 'last_name' : 'Tonel'}
+    ]
+
+def iterateDictionary2(key_name, list):
+    for i in range(0, len(list)):
+        print(str(list[i][key_name]))
+
+iterateDictionary2('last_name', students)
+iterateDictionary2('first_name', students)
 
 # ------------------------------------------------------------
 
@@ -72,3 +90,11 @@ dojo = {
     'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
+
+def printInfo(dict):
+    for k in dict:
+        print("key: " + k)
+        print("list size: " + str(len(dict[k])))
+        print("values: " + str(dict[k]))
+
+printInfo(dojo)
