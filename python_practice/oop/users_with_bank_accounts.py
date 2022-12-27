@@ -64,8 +64,14 @@ class BankAccount:
 # User instances
 max = User("Max", "max@gmail.com")
 tom = User("Tom", "tommy@yahoo.com")
+jimmy = User("Jimmy", "james150@gmail.com")
 
 max.account.deposit(150)
 max.display_user_balance()
 max.account.display_account_info()
 max.transfer_money(tom, 75)
+jimmy.account.deposit(500)
+jimmy.account.display_account_info()
+jimmy.transfer_money(max, 100)
+
+BankAccount.print_all_accounts()
