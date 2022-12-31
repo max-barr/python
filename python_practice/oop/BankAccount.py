@@ -30,6 +30,11 @@ class BankAccount:
         for account in cls.accounts:
             account.display_account_info()
 
+class RetirementAccount(BankAccount):
+    def __init__(self, name, int_rate, is_roth, balance=0):
+        super().__init__(name, int_rate, balance)
+        self.is_roth = is_roth
+
 checking = BankAccount("Checking", 0.01)
 savings = BankAccount("Savings", 0.02)
 
