@@ -9,6 +9,19 @@ class User:
     def say_hello(self):
         return "hello"
 
+class Parent:
+    def method_a(self):
+        print("invoking PARENT method_a")
+class Child:
+    def method_a(self):
+        print("invoking CHILD method_a")
+
+dad = Parent()
+son = Child()
+
+dad.method_a()
+son.method_a()
+
 print(square(4))
 user = User("Emma")
 print(user.name)
