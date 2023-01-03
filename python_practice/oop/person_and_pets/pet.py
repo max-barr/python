@@ -1,4 +1,4 @@
-import person
+from person import Person
 
 class Pet:
     def __init__(self, name, species, tricks, health, energy):
@@ -16,4 +16,4 @@ class Pet:
         pass
     def noise(self):
         pass
-    
+
