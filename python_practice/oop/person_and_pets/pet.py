@@ -1,5 +1,3 @@
-from person import Person
-
 class Pet:
     def __init__(self, name, species, tricks, health, energy):
         self.name = name
@@ -9,11 +7,19 @@ class Pet:
         self.energy = energy
     # class methods
     def sleep(self):
-        pass
+        self.energy += 25
+        print(f"{self.name} is sleeping.")
+        return self
     def eat(self):
-        pass
+        self.energy += 5
+        self.health += 10
+        print(f"{self.name} is eating.")
+        return self
     def play(self):
-        pass
+        self.health += 5
+        print(f"{self.name} is playing!")
+        return self
     def noise(self):
-        pass
+        print("WOOF!")
+        return self
 
