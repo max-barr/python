@@ -34,5 +34,10 @@ sliced_ham = Product("Sliced Ham", 6, "Deli Meats")
 
 qfc.add_product(peanut_butter).add_product(milk).add_product(sliced_ham).add_product(sliced_turkey)
 
+qfc.sell_product(1)
+
+# qfc.inflation(0.3)
+qfc.set_clearance("Deli Meats", 0.30)
+
 for product in qfc.products:
     product.print_info()
