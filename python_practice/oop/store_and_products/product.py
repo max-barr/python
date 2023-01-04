@@ -5,13 +5,14 @@ class Product:
         self.category = category
     # Class methods
     def update_price(self, percent_change, is_increased):
+        change_amount = self.price * percent_change
         if is_increased == True:
-            self.price += (self.price * percent_change)
+            self.price += change_amount
         else:
-            self.price -= (self.price * percent_change)
+            self.price -= change_amount
         return self
     def print_info(self):
-        print(f"Name: {self.name}\n Category: {self.category}\n Price: {self.price}")
+        print(f"Name: {self.name}\nCategory: {self.category}\nPrice: {self.price}")
         return self
 
 
