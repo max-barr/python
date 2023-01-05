@@ -36,7 +36,22 @@ class isPalindromeTests(unittest.TestCase):
     def testThree(self):
         self.assertTrue(isPalindrome("wonderednow"))
 
+# --------------------------------------
 
+# coins - Write a function that determines how many quarters, dimes, nickels, and pennies to give to a customer for a change where you minimize the number of coins you give out.
+
+def coins(num):
+    pass
+
+class coinsTests(unittest.TestCase):
+    def testOne(self):
+        self.assertEqual(coins(87), [3,1,0,2])
+    def testTwo(self):
+        pass
+    def testThree(self):
+        pass
+    def testFour(self):
+        pass
 
 
 if __name__ == '__main__':
