@@ -21,8 +21,12 @@ class reverseListTests(unittest.TestCase):
 
 # isPalindrome - Write a function that checks whether the given word is a palindrome (a word that spells the same backward).
 
-def isPalindrome(word):
-    pass
+def isPalindrome(str):
+    # Run loop from 0 to len/2
+    for i in range(int(len(str)/2)):
+        if str[i] != str[len(str)-i-1]:
+            return False
+    return True
 
 class isPalindromeTests(unittest.TestCase):
     def testOne(self):
