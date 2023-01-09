@@ -1,4 +1,5 @@
 import unittest
+import math
 
 # reverseList - Write a function that reverses the values in the list (without creating a temporary array).
 
@@ -41,17 +42,29 @@ class isPalindromeTests(unittest.TestCase):
 # coins - Write a function that determines how many quarters, dimes, nickels, and pennies to give to a customer for a change where you minimize the number of coins you give out.
 
 def coins(num):
-    pass
+    list = []
+    quarters = math.floor(num/25)
+    list.append(quarters)
+    new_num = num % 25
+    dimes = math.floor(new_num/10)
+    list.append(dimes)
+    new_num = new_num % 10
+    nickels = math.floor(new_num/5)
+    list.append(nickels)
+    new_num = new_num % 5
+    # Pennies 
+    list.append(new_num)
+    return list
 
 class coinsTests(unittest.TestCase):
     def testOne(self):
         self.assertEqual(coins(87), [3,1,0,2])
     def testTwo(self):
-        pass
+        self.assertEqual(coins(23), [0,2,0,3])
     def testThree(self):
-        pass
+        self.assertEqual(coins(98), [3,2,0,3])
     def testFour(self):
-        pass
+        self.assertEqual(coins(16), [0,1,1,1])
 
 
 if __name__ == '__main__':
