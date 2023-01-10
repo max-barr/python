@@ -65,6 +65,8 @@ class coinsTests(unittest.TestCase):
         self.assertEqual(coins(98), [3,2,0,3])
     def testFour(self):
         self.assertEqual(coins(16), [0,1,1,1])
+    def testFive(self):
+        self.assertEqual(coins(125), [5,0,0,0])
 
 
 if __name__ == '__main__':
