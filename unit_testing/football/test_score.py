@@ -18,5 +18,10 @@ class TestScore(unittest.TestCase):
         self.assertEqual(score.field_goal(20), 23)
         self.assertEqual(score.field_goal(3), 6)
 
+    def test_safety(self):
+        self.assertEqual(score.safety(0), 2)
+        self.assertEqual(score.safety(14), 16)
+        self.assertEqual(score.safety(28), 30)
+
 if __name__ == "__main__":
     unittest.main()

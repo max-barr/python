@@ -16,3 +16,9 @@ def field_goal(score):
     score += 3
     return score
 
+def safety(score):
+    if score < 0:
+        raise ValueError("Score cannot be negative")
+    score += 2
+    return score
+
