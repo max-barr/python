@@ -25,3 +25,4 @@ def jump_ball(team_1, team_2):
         print("The {} won the ball".format(team_2))
 
 jump_ball("Portland Trail Blazers", "Los Angeles Lakers")
+jump_ball("Milwaukee Bucks", "Phoenix Suns")
