@@ -16,6 +16,7 @@ class TestScore(unittest.TestCase):
         self.assertEqual(score.free_throw(5), 6)
         self.assertEqual(score.free_throw(55), 56)
         self.assertNotEqual(score.free_throw(19), 21)
+        self.assertNotEqual(score.free_throw(34, 37))
 
     def test_three_pointer(self):
         self.assertEqual(score.three_pointer(1), 4)
