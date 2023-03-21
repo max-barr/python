@@ -25,8 +25,11 @@ def jump_ball(team_1, team_2):
         print("The {} won the ball".format(team_2))
 
 def technical_foul(score):
+    print("You have earned a technical foul with that behavior")
     free_throw(score)
     return score
 
 jump_ball("Portland Trail Blazers", "Los Angeles Lakers")
 jump_ball("Milwaukee Bucks", "Phoenix Suns")
+
+print(technical_foul(22))

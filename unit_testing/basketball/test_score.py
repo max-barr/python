@@ -25,6 +25,9 @@ class TestScore(unittest.TestCase):
         self.assertEqual(score.three_pointer(115), 118)
         self.assertIs(score.three_pointer(3), 6)
 
+    def test_technical_foul(self):
+        self.assertEqual(score.technical_foul(22), 23)
+
 # This runs our test
 if __name__ == "__main__":
     unittest.main()
