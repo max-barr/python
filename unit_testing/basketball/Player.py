@@ -7,6 +7,9 @@ class Player:
         self.team = team
         self.number = number
 
+    def tee_him_up(self):
+        return '{} {} has been assessed a technical foul. The other team will shoot one free throw.'.format(self.first_name, self.last_name)
+
     @property
     def player_card(self):
         return '{} {}, number {}, {} for the {}'.format(self.first_name, self.last_name, self.number, self.position, self.team)
