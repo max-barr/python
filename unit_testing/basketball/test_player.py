@@ -16,6 +16,7 @@ class TestPlayer(unittest.TestCase):
 
     def test_tee_him_up(self):
         self.assertEqual(self.player_1.tee_him_up(), "Damian Lillard has been assessed a technical foul. The other team will shoot one free throw.")
+        self.assertNotEqual(self.player_1.tee_him_up(), "Damannn Lillard has been assessed a technical foul. The other team will shoot one free throw.")
         
     def tearDown(self):
         print("Running Teardown")
