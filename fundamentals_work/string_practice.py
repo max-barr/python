@@ -16,3 +16,12 @@ fave_food1 = "sushi"
 fave_food2 = "pizza"
 print("I love to eat {} and {}.".format(fave_food1, fave_food2)) # with .format()
 print(f"I love to eat {fave_food1} and {fave_food2}.") # with an f string
+
+
+# LISTS
+fruits = ['apple', 'banana', 'orange', 'strawberry']
+vegetables = ['lettuce', 'cucumber', 'carrots']
+fruits_and_vegetables = fruits + vegetables
+print(fruits_and_vegetables)
+salad = 3 * vegetables
+print(salad)
