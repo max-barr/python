@@ -32,7 +32,10 @@ students = [
 ]
 
 def iterateDictionary(list):
+    # i is now a dictionary
     for i in list:
-        print(list[i])
+        # use items method to retrieve keys, values
+        for key, val in i.items():
+            print(key + ": " + val)
 
 iterateDictionary(students)
