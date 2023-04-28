@@ -23,10 +23,10 @@ class User:
 
     def spend_points(self, amount):
         self.gold_card_points -= amount
-        print(f"{self.first_name} {self.last_name} has successfully spent {amount} gold ")
+        print(f"{self.first_name} {self.last_name} has successfully spent {amount} gold card points.")
         return self
 
 
 
 john = User("John", "Johnson", "john@yahoo.com", 34)
-john.display_info()
+john.display_info().enroll().display_info().spend_points(150).display_info()
