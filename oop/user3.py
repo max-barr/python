@@ -22,9 +22,13 @@ class User:
             return self
 
     def spend_points(self, amount):
-        self.gold_card_points -= amount
-        print(f"{self.first_name} {self.last_name} has successfully spent {amount} gold card points.")
-        return self
+        if self.gold_card_points - amount > 0:
+            self.gold_card_points -= amount
+            print(f"{self.first_name} {self.last_name} has successfully spent {amount} gold card points.")
+            return self
+        else:
+            print(f"{self.first_name} {self.last_name} does not have enough points.")
+            return self
 
 
 
