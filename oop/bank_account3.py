@@ -79,6 +79,10 @@ class User:
     def make_withdrawal(self, amount):
         self.account.withdraw(amount)
         return self
+    
+    def display_user_balance(self):
+        self.account.display_account_info()
+        return self
 
 # Class instances
 account1 = BankAccount()
@@ -90,4 +94,4 @@ BankAccount.display_all_accounts()
 
 john = User("John", "Johnson", "john@yahoo.com", 34)
 john.make_deposit(200)
-print(john.account.balance)
+john.display_user_balance()
