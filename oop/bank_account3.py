@@ -71,6 +71,14 @@ class User:
         else:
             print(f"{self.first_name} {self.last_name} does not have enough points.")
             return self
+        
+    def make_deposit(self, amount):
+        self.account.deposit(amount)
+        return self
+    
+    def make_withdrawal(self, amount):
+        self.account.withdraw(amount)
+        return self
 
 # Class instances
 account1 = BankAccount()
@@ -81,5 +89,5 @@ account1.deposit(100).deposit(25).deposit(41).withdraw(11).yield_interest().disp
 BankAccount.display_all_accounts()
 
 john = User("John", "Johnson", "john@yahoo.com", 34)
-john.display_info()
+john.make_deposit(200)
 print(john.account.balance)
